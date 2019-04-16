@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ravnjak.nejc"
+    android:versionCode="1"
+    android:versionName="1.0.0" >
+
+    <application
+        android:icon="@drawable/ikona"
+        android:label="Matematicne vaje" >
+        <activity
+            android:label="Matematicne vaje"
+            android:name=".NalogaDrilActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+             <activity
+            android:label="@string/app_name"
+            android:name=".naslovnica" 
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter >
+                <action android:name="ravnjak.nejc.naslovnica" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+              <activity
+            android:label="@string/app_name"
+            android:name=".glavni" 
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter >
+                <action android:name="ravnjak.nejc.glavni" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+                  <activity
+            android:label="@string/app_name"
+            android:name=".sestevanje" 
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter >
+                <action android:name="ravnjak.nejc.sest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+                      <activity
+            android:label="@string/app_name"
+            android:name=".odstevanje" 
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter >
+                <action android:name="ravnjak.nejc.odst" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+                          <activity
+            android:label="@string/app_name"
+            android:name=".deljenje" 
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter >
+                <action android:name="ravnjak.nejc.delj" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+                              <activity
+            android:label="@string/app_name"
+            android:name=".mnozenje" 
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter >
+                <action android:name="ravnjak.nejc.mnoz" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+                                  
+            
+    </application>
+
+</manifest>
