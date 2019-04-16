@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Spetial button with spetial animations-->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 	<item android:state_pressed="true" android:drawable="@drawable/preveri" />
 	<item android:state_pressed="true" android:drawable="@drawable/naprej" />
