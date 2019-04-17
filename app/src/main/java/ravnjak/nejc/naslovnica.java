@@ -10,13 +10,13 @@ public class naslovnica extends Activity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // load the selection view
         setContentView(R.layout.naslovnica);
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        // togle full screen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        
-        
     }
-	
+
+    // function calls from the view --> starting the correct parts of the "game"
 	public void sestevanje (View v) {
 		 startActivity(new Intent("ravnjak.nejc.sest"));
 		 finish();
@@ -41,7 +41,4 @@ public class naslovnica extends Activity {
 		startActivity(new Intent("ravnjak.nejc.glavni"));
 		finish();
 	}
-
-
-
 }
