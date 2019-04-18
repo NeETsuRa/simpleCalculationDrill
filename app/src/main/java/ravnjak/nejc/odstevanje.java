@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
+// class for substraction drill
 public class odstevanje extends Activity {
 	int napake=0;
 	int pravilni=0;
@@ -20,20 +20,23 @@ public class odstevanje extends Activity {
 	int c=0;
 	
 	@Override
-	    public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // set the view and set full screen
         setContentView(R.layout.program);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // start with the drill game
         naloga();
     }
+
 	public void preveri (View v) {
+		// check the result
 		TextView nal = (TextView)findViewById(R.id.hint);
         nal.setTextColor(Color.WHITE);
         nal.setTextSize(1);
 		
 		EditText resitev=(EditText)findViewById(R.id.rezultat);
-		
-			res=Integer.parseInt(resitev.getText().toString());
+		res=Integer.parseInt(resitev.getText().toString());
 		
 		if(res==c)
 			pravilni++;
@@ -43,32 +46,28 @@ public class odstevanje extends Activity {
 		if(st_nalog==10){
 			konec();
 			return;
-					}
+		}
 		
 		naloga();
 	}
 	
 	public void konec(){
+		// present the result of the drill
 		setContentView(R.layout.statistika);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		TextView sta = (TextView)findViewById(R.id.statistika);
         sta.setTextColor(Color.BLACK);
         sta.setText("Pravilni: "+String.valueOf(pravilni)+" \n "+"Napaèni: " + String.valueOf(napake));
-        
-		
 	}
 	
 	public void nazaj(View v){
+		// return back to the main site
 		startActivity(new Intent("ravnjak.nejc.naslovnica"));
 		finish();
 	}
-	
-	
-	
-	
-	
+
 	public void naloga(){
-		
+		// start the drill
 		final Random naklju = new Random();
         int a=naklju.nextInt(100);
         int b=naklju.nextInt(100);
@@ -92,7 +91,5 @@ public class odstevanje extends Activity {
 				return false;
 			}
 		});
-        	
 	}
-
 }
