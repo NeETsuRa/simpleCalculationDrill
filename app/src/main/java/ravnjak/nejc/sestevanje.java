@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
+// the drill calculation for sum
 public class sestevanje extends Activity {
 	int napake=0;
 	int pravilni=0;
@@ -20,13 +20,16 @@ public class sestevanje extends Activity {
 	int c=0;
 	
 	@Override
-	    public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
+		// set the the view
         super.onCreate(savedInstanceState);
         setContentView(R.layout.program);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // start the calculation
         naloga();
     }
 	public void preveri (View v) {
+		// check the result
 		TextView nal = (TextView)findViewById(R.id.hint);
         nal.setTextColor(Color.WHITE);
         nal.setTextSize(1);
@@ -41,32 +44,27 @@ public class sestevanje extends Activity {
 		if(st_nalog==10){
 			konec();
 			return;
-					}
-		
+		}
 		naloga();
 	}
 	
 	public void konec(){
+		// finnal check up an present the information of the drill
 		setContentView(R.layout.statistika);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		TextView sta = (TextView)findViewById(R.id.statistika);
         sta.setTextColor(Color.BLACK);
         sta.setText("Pravilni: "+String.valueOf(pravilni)+" \n "+"Napaèni: " + String.valueOf(napake));
-        
-		
 	}
 	
 	public void nazaj(View v){
+		// back to main site
 		startActivity(new Intent("ravnjak.nejc.naslovnica"));
 		finish();
 	}
-	
-	
-	
-	
-	
+
 	public void naloga(){
-		
+		// start the calculation --> Drill
 		final Random naklju = new Random();
         int a=naklju.nextInt(100);
         int b=naklju.nextInt(100);
@@ -88,7 +86,5 @@ public class sestevanje extends Activity {
     				return false;
     			}
     		});
-        	
 	}
-
 }
